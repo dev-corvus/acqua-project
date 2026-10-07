@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Quicksand, sans-serif;
+}
+
+:root {
+    --dark: #1a1a1a;
+    --offwhite: #f1f1f1;
+    --light: #eaeaea;
+    --blue: #327AFF;
+    --darkblue: #34495E;
+    --bluegradient: #327AFF, #34495E;
+}
+
+body {
+    background-color: var(--offwhite);
+}
