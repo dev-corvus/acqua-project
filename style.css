@@ -1,19 +1,52 @@
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Quicksand, sans-serif;
+    box-sizing: border-box;
+    list-style: none;
 }
 
 :root {
-    --dark: #1a1a1a;
-    --offwhite: #f1f1f1;
-    --light: #eaeaea;
-    --blue: #327AFF;
-    --darkblue: #34495E;
-    --bluegradient: #327AFF, #34495E;
+    --fonte-primaria: "Poppins", sans-serif;
+
+    --cor-primaria: #f1f1f1;
+    --cor-secundaria: #f1f1f1;
+
+
+    --cor-texto: #1c1c1c;
+    --cor-texto-secundaria: #ffffff;
+
+    --cor-overlay: #00000085;
+
+    --cor-gradiente: linear-gradiente(to right, #3449SE, #3498DB);
 }
 
 body {
-    background-color: var(--offwhite);
+    font-family: var(--fonte-primaria);
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto);
+    min-;
+}
+
+.section-counter {
+    background-image: url("images/predio3.png");
+    background-size: cover;
+    height: 80dvh;
+}
+
+.counter {
+    height: 100%;
+    background-color: var(--cor-overlay);
+    display: flex;
+    align-items: center; /*alinha os elementos no eixo vertical */
+    justify-content: center; /*alinha os elementos no eixo horizontal */
+
+}
+
+.counter p{
+    color: var(--cor-texto-secundaria);
+}
+
+/* provisório para a aplicação não quebrar */
+img {
+    max-width: 100%;
 }
