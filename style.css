@@ -17,20 +17,26 @@
 
     --cor-overlay: #00000085;
 
-    --cor-gradiente: linear-gradiente(to right, #3449SE, #3498DB);
+    --cor-gradiente: linear-gradient(to right, #34495E, #3498DB);
+
+    --cor-borda: #BBBBBB;
 }
+
+/* main {
+} */
 
 body {
     font-family: var(--fonte-primaria);
     background-color: var(--cor-primaria);
-    color: var(--cor-texto);
-    min-;
 }
+
+/* --------------- COUNTER ----------------- */
 
 .section-counter {
     background-image: url("images/predio3.png");
     background-size: cover;
     height: 80dvh;
+    font-weight: 700;
 }
 
 .counter {
@@ -39,14 +45,98 @@ body {
     display: flex;
     align-items: center; /*alinha os elementos no eixo vertical */
     justify-content: center; /*alinha os elementos no eixo horizontal */
-
+    font-size: 32px;
+    color: var(--cor-texto-secundaria);
+    text-shadow: 2px 2px #000000;
 }
 
-.counter p{
-    color: var(--cor-texto-secundaria);
+
+.counter div {
+    text-align: center;
+}
+
+.counter p:first-child {
+    font-size: 3rem;
+}
+
+/* --------------- FORM ----------------- */
+.section-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height:80dvh;
+    padding: 1rem;
+    background-color: var(--cor-secundaria);
+    text-align: center;
+}
+
+.section-form h2 + p{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.section-form h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    background: var(--cor-gradiente);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-form p + p {
+    font-size: 1rem;
+    max-width: 75ch;
+    margin-bottom: 2rem;
+}
+
+.section-form form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+}
+
+input, button {
+    height: 3rem;
+    border-radius: 3.75rem;
+}
+
+input {
+    border: 1px solid var(--cor-borda);
+    padding: 0 1rem;
+}
+
+button {
+    border: 0;
+    background: var(--cor-gradiente);
+    font-weight: 600;
+    color: var(--cor-primaria);
+    cursor: pointer;
 }
 
 /* provisório para a aplicação não quebrar */
 img {
     max-width: 100%;
 }
+
+/* --------------- PROGRESS ----------------- */
+.section-progress {
+    background-color: var(--cor-texto-secundaria);
+    padding: 4.75rem 1rem;
+    text-align: center;
+}
+
+.section-progress h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.section-progress ul {
+    margin-top: 10px;
+}
+
+
