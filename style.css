@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     list-style: none;
+    text-decoration: none;
 }
 
 /* classes utilitárias */
@@ -185,6 +186,26 @@ img {
     border-radius: 4px;
     transition: all 300ms;
     display: block; /*avoids inheriting inline text spacing*/
+}
+
+footer  {
+    background: var(--cor-gradiente);
+    color: var(--cor-primaria);
+    padding: 2rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer a {
+    font-weight: 500;
+    color: var(--cor-texto);
+    border: 1px solid var(--cor-borda);
+    border-radius: 3.375rem;
+    padding: 0.7rem;
+    background-color: var(--cor-primaria);
 }
 
 @media (min-width: 744px){
