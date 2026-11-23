@@ -17,7 +17,7 @@
     <title>Projeto Acqua</title>
 </head>
 <body>
-    <main>
+    <main id="main-content">
         <div class="container">
             <section class="section-counter">
                 <div class="counter">
@@ -49,7 +49,7 @@
                     <label for="email" class="visuallyhidden"></label>
                     <input type="email" name="email" id="email" placeholder="Digite seu email..." autocomplete="email">
 
-                    <button type="submit">Quero saber mais</button>
+                    <button class="btn-send" type="submit">Quero saber mais</button>
                 </form>
             </section>
         </div>
@@ -67,6 +67,18 @@
                 <li><img src="images/predio6.png" alt="imagem do predio 6"></li>
             </ul>
         </section>
+
+        <section class="section-news" aria-labelledby="title-news">
+            <header class="header-news">
+                <span class="news-tag"> Informação em Tempo Real </span>
+                <!-- <h3 id="title-news"> Título </h3>
+                <p> Confira as principais notícias sobre o Brasil e do mundo para ajudar a decidir se o Projeto Acqua faz sentido para você. </p> -->
+            </header>
+
+            <ul id="list-news" class="list-news" aria-label="list de notícias">
+                <!-- <li> Carregando notícias... </li> -->
+            </ul>
+        </section>
     </main>
 
     <footer>
@@ -76,6 +88,8 @@
         </nav>
         <p>Feito por Alex Furukawa (Transforme-se Turma 23 | 2026)</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
 

@@ -7,7 +7,7 @@
 }
 
 /* classes utilitárias */
-.visuallyhidden{
+.visuallyhidden {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -47,11 +47,12 @@ body {
 }
 
 body::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 /* --------------- COUNTER ----------------- */
-.section-counter, .section-form {
+.section-counter,
+.section-form {
     height: 90dvh;
     width: 100%;
 }
@@ -68,15 +69,17 @@ body::-webkit-scrollbar {
     background-color: var(--cor-overlay);
 
     display: flex;
-    align-items: center; /*alinha os elementos no eixo vertical */
-    justify-content: space-around; /*alinha os elementos no eixo horizontal */
+    align-items: center;
+    /*alinha os elementos no eixo vertical */
+    justify-content: space-around;
+    /*alinha os elementos no eixo horizontal */
 }
 
 .counter div {
     text-align: center;
 }
 
-.counter p{
+.counter p {
     color: var(--cor-texto-secundaria);
     text-shadow: .125rem .125rem #000000;
 }
@@ -92,14 +95,14 @@ body::-webkit-scrollbar {
 
 /* --------------- FORM ----------------- */
 .section-form {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-     background-color: var(--cor-secundaria);
-     text-align: center;
-     padding: 1rem;
+    background-color: var(--cor-secundaria);
+    text-align: center;
+    padding: 1rem;
 }
 
 .section-form h2 {
@@ -112,13 +115,13 @@ body::-webkit-scrollbar {
     margin-bottom: 1rem;
 }
 
-.section-form h2 + p{
+.section-form h2+p {
     font-size: 1rem;
     margin-bottom: 1rem;
     font-weight: 600;
 }
 
-.section-form p + p {
+.section-form p+p {
     font-size: 1rem;
     max-width: 75ch;
     margin-bottom: 2rem;
@@ -133,7 +136,8 @@ body::-webkit-scrollbar {
     gap: 1rem;
 }
 
-input, button {
+input,
+button {
     height: 3rem;
     border-radius: 3.375rem;
 }
@@ -143,7 +147,7 @@ input {
     padding: 1rem;
 }
 
-button {
+.btn-send {
     border: 0;
     background: var(--cor-gradiente);
     font-weight: 500;
@@ -151,8 +155,13 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+button:hover, .card-news a:hover {
     background: var(--cor-gradiente-hover);
+}
+
+button:focus-visible, .card-news a:focus-visible {
+    outline: 0.125rem solid var(--cor-primaria);
+    outline-offset: 0.25rem;
 }
 
 img:hover {
@@ -165,7 +174,8 @@ img:hover {
     text-align: center;
 }
 
-.section-progress h2 {
+.section-progress h2,
+.section-news h2 {
     font-size: 2rem;
     font-weight: 700;
 }
@@ -185,14 +195,103 @@ img {
     max-width: 100%;
     border-radius: 4px;
     transition: all 300ms;
-    display: block; /*avoids inheriting inline text spacing*/
+    display: block;
+    /*avoids inheriting inline text spacing*/
 }
 
-footer  {
+/* --------------- NEWS ----------------- */
+
+.section-news {
+    max-width: 75rem;
+    margin: auto;
+    padding: 3rem 1rem;
+}
+
+.header-news {
+    margin-bottom: 2rem;
+}
+
+.header-news p{
+    color: #666;
+    line-height: 1.6;
+}
+
+.news-tag {
+    display: inline-block;
+
+    padding: 0.5rem 0.85rem;
+    margin-bottom: 1rem;
+
     background: var(--cor-gradiente);
     color: var(--cor-primaria);
-    padding: 2rem;
+    border-radius: 2rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.list-news {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr)); /* deixa responsivo */
     gap: 1rem;
+}
+
+.card-news {
+    height: 100%;
+    overflow: hidden;
+
+    border-radius: 1rem;
+    background-color: var(--cor-secundaria);
+    box-shadow: 0 0.5rem 1rem var(--cor-borda);
+
+    flex-direction: column;
+
+    transition: all 300ms ease-in;
+}
+
+.card-news h3 {
+    color: #fcaf61;
+}
+
+.card-news img {
+    width: 100%;
+    height: 14rem;
+    object-fit: cover;
+}
+
+.card-news div{
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    color: #666;
+}
+
+.card-news span {
+    font-size: 0.7rem;
+    line-height: 2;
+    color: #34495E;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-news a {
+    border: 0;
+    background: var(--cor-gradiente);
+    font-weight: 500;
+    color: var(--cor-primaria);
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+    transition: all 200ms ease-in;
+}
+
+footer {
+    background: var(--cor-gradiente-hover);
+    color: var(--cor-primaria);
+    padding: 1rem;
+    gap: 0.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -200,22 +299,30 @@ footer  {
 }
 
 footer a {
-    font-weight: 500;
-    color: var(--cor-texto);
-    border: 1px solid var(--cor-borda);
-    border-radius: 3.375rem;
-    padding: 0.7rem;
-    background-color: var(--cor-primaria);
+    display: inline-block;
+
+    padding: 0.5rem 0.85rem;
+
+    background: var(--cor-gradiente);
+    color: var(--cor-primaria);
+    border-radius: 2rem;
+    font-size: 0.75rem;
+    font-weight: 700;
 }
 
-@media (min-width: 744px){
-    .section-progress ul{
+footer p {
+    font-size: 0.7rem;
+    color: var(--cor-secundaria);
+}
+
+@media (min-width: 744px) {
+    .section-progress ul {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
-@media (min-width: 1280px){
-    .container{
+@media (min-width: 1280px) {
+    .container {
         display: flex;
     }
 }
