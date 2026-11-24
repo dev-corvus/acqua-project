@@ -69,3 +69,10 @@ async function fetchNews() {
 }
 
 fetchNews();
+
+const thisYear = document.querySelector("#this-year");
+
+const date = new Date();
+const year = date.getFullYear();
+
+thisYear.textContent = year;
