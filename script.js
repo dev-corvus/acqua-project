@@ -32,6 +32,10 @@ async function fetchNews() {
             image.alt = article.title; // n tem texto alternativo, ent sera o texto
 
             const content_div = document.createElement("div");
+            content_div.classList.add("card-content");
+
+            const metadata = document.createElement("div");
+            metadata.classList.add("card-meta");
 
             const font = document.createElement("span")
             font.classList.add("card-font")
@@ -55,7 +59,8 @@ async function fetchNews() {
             link.rel = "noopeneer noreferrer"
             // impedir q um pag ao ser aberta, uma outra aba consiga acessar com programação
 
-            content_div.append(font, title, paragraphDescription, date, link);
+            metadata.append(font, date);
+            content_div.append(metadata, title, paragraphDescription, link);
             card.append(image, content_div);
 
             const itemList = document.createElement("li")
