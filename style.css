@@ -170,7 +170,9 @@ img:hover {
 
 /* --------------- PROGRESS ----------------- */
 .section-progress {
-    padding: 4.75rem 1rem;
+    max-width: 75rem;
+    margin: auto;
+    padding: 3rem 1rem;
     text-align: center;
 }
 
@@ -219,7 +221,7 @@ img {
 .news-tag {
     display: inline-block;
 
-    padding: 0.5rem 0.85rem;
+    padding: 0.4rem 0.85rem;
     margin-bottom: 1rem;
 
     background: var(--cor-gradiente);
@@ -291,7 +293,7 @@ img {
 footer {
     background: var(--cor-gradiente-hover);
     color: var(--cor-primaria);
-    padding: 2rem 1rem;
+    padding: 2rem 0;
     gap: 0.5rem;
     display: flex;
     flex-direction: column;
@@ -299,11 +301,24 @@ footer {
     justify-content: center;
 }
 
+.footer-container {
+    width: 100%;
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.footer-container nav {
+    gap: 0.5rem;
+}
+
+footer p {
+    font-size: 0.75rem;
+    color: var(--cor-secundaria);
+}
+
 footer a {
-    display: inline-block;
-
-    padding: 0.5rem 0.85rem;
-
+    padding: 0.4rem 0.85rem;
     background: var(--cor-gradiente);
     color: var(--cor-primaria);
     border-radius: 2rem;
@@ -311,25 +326,18 @@ footer a {
     font-weight: 700;
 }
 
-footer p {
-    font-size: 0.7rem;
-    color: var(--cor-secundaria);
-}
-
 @media (min-width: 744px) {
     .section-progress ul {
         grid-template-columns: 1fr 1fr 1fr;
     }
-}
-
-@media (min-width: 1280px) {
-    .container {
-        display: flex;
-    }
 
     footer {
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: column;
+    }
+
+    .footer-container {
+        display: flex;
         justify-content: space-between;
         align-items: center;
     }
@@ -338,7 +346,6 @@ footer p {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        text-align: center;
         gap: 0.5rem;
     }
 
@@ -346,10 +353,15 @@ footer p {
         min-width: 10rem;
     }
 
-    .footer-container {
+    .footer-rights {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        text-align: left;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container {
+        display: flex;
     }
 }
